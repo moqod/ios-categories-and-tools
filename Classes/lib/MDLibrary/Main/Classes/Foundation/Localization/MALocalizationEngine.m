@@ -1,5 +1,5 @@
 //
-//  SBLocaleManager.m
+//  MALocalizationEngine.m
 //  
 //
 //  Created by ako on 14.12.11.
