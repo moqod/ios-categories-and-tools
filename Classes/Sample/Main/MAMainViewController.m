@@ -17,62 +17,7 @@
 @implementation MAMainViewController
 
 #pragma mark -
-/*
-- (NSArray *)categoriesMenuList {
-	return [NSArray arrayWithObjects:
-			[NSDictionary dictionaryWithObjectsAndKeys:
-			 @"NSFileManager+Tools", @"title",
-			 @"moqod & awl", @"subtitle",
-			 @"NSFileManagerToolsViewController", @"controllerClass", nil],
-			[NSDictionary dictionaryWithObjectsAndKeys:
-			 @"UIDevice+Categories", @"title",
-			 @"UIDeviceCategoriesViewController", @"controllerClass", nil],
-			nil];
-}
 
-- (NSArray *)networkMenuList {
-	return [NSArray arrayWithObjects:
-			[NSDictionary dictionaryWithObjectsAndKeys:
-			 @"Reachability", @"title",
-			 @"ReachabilityViewController", @"controllerClass", nil],
-			nil];
-}
-
-- (NSArray *)dataMenuList {
-	return [NSArray arrayWithObjects:
-			[NSDictionary dictionaryWithObjectsAndKeys:
-			 @"HTML Parser", @"title",
-			 @"HTMLParserViewController", @"controllerClass", nil],
-			[NSDictionary dictionaryWithObjectsAndKeys:
-			 @"SSZipArchive", @"title",
-			 @"SSZipArchiveViewController", @"controllerClass", nil],
-            [NSDictionary dictionaryWithObjectsAndKeys:
-			 @"CoreData", @"title",
-			 @"CoreDataViewController", @"controllerClass", nil],
-			nil];
-}
-
-- (NSArray *)imagesMenuList {
-	return [NSArray arrayWithObjects:
-			[NSDictionary dictionaryWithObjectsAndKeys:
-			 @"UIImage+QR", @"title",
-			 @"UIImageQRViewController", @"controllerClass", nil],
-			[NSDictionary dictionaryWithObjectsAndKeys:
-			 @"UIImage+RoundedCorner", @"title",
-			 @"UIImageRoundedCornersViewController", @"controllerClass", nil],
-			[NSDictionary dictionaryWithObjectsAndKeys:
-			 @"UIImage+Tint", @"title",
-			 @"UIImageTintViewController", @"controllerClass", nil],
-			nil];
-}
-
-- (NSArray *)utilMenuList {
-	return [NSArray arrayWithObjects:
-			[NSDictionary dictionaryWithObjectsAndKeys:
-			 @"AWLLocationManager", @"title",
-			 @"AWLLocationServiceViewController", @"controllerClass", nil],nil];
-}
-*/
 - (NSArray *)userInterfaceMenuList {
 	return [NSArray arrayWithObjects:
 			[NSDictionary dictionaryWithObjectsAndKeys:
@@ -94,25 +39,6 @@
 					  @"User Interface", @"title",
 					  [self userInterfaceMenuList], @"items", nil],
 					 nil];
-		/*
-		_menuList = [[NSArray alloc] initWithObjects:
-					 [NSDictionary dictionaryWithObjectsAndKeys:
-					  @"Categories", @"title",
-					  [self categoriesMenuList], @"items", nil],
-					 [NSDictionary dictionaryWithObjectsAndKeys:
-					  @"Network", @"title",
-					  [self networkMenuList], @"items", nil],
-					 [NSDictionary dictionaryWithObjectsAndKeys:
-					  @"Data", @"title",
-					  [self dataMenuList], @"items", nil],
-					 [NSDictionary dictionaryWithObjectsAndKeys:
-					  @"UIImage+Categories", @"title",
-					  [self imagesMenuList], @"items", nil],
-                     [NSDictionary dictionaryWithObjectsAndKeys:
-					  @"Util", @"title",
-					  [self utilMenuList], @"items", nil],
-					 nil];
-		 */
     }
     return self;
 }

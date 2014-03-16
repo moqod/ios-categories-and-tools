@@ -9,7 +9,7 @@
 #import "MASmartScrollView.h"
 #import "NSString+MASizeWithFont.h"
 
-const int AWLSmartScrollView_SubviewTag			= 1;
+const int MASmartScrollViewSubviewTag			= 1;
 
 @interface MASmartScrollView () {
 	UIScrollView	*_scrollView;
@@ -74,7 +74,7 @@ const int AWLSmartScrollView_SubviewTag			= 1;
 
 	BOOL previousViewWasLabel = NO;
 	for (UIView *v in _scrollView.subviews) {
-		if (v.tag == AWLSmartScrollView_SubviewTag) {
+		if (v.tag == MASmartScrollViewSubviewTag) {
 			BOOL currentViewIsLabel = [v isKindOfClass:[UILabel class]];
 			// add Y offset
 			currentY += ( (currentViewIsLabel && previousViewWasLabel) || (currentY < initialHorizontalMargin + 1.0f)) ? 2.0f : offsetBetweenViews;
@@ -101,7 +101,7 @@ const int AWLSmartScrollView_SubviewTag			= 1;
 	if (view == _scrollView) {
 		[super addSubview:_scrollView];
 	} else {
-		view.tag = AWLSmartScrollView_SubviewTag;
+		view.tag = MASmartScrollViewSubviewTag;
 		[_scrollView addSubview:view];
 	}
 }

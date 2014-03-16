@@ -1,6 +1,6 @@
 //
 //  UIAlertView+Blocks.m
-//  AWLLibrary
+//  iOS Library
 //
 //  Created by Alex Severyanov on 23.08.13.
 //  Copyright (c) 2013 Moqod. All rights reserved.

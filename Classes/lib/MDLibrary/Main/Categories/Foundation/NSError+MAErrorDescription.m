@@ -3,7 +3,7 @@
 //  
 //
 //  Created by Andrew Kopanev on 8/23/13.
-//  Copyright (c) 2013 AWL. All rights reserved.
+//  Copyright (c) 2013 Moqod. All rights reserved.
 //
 
 #import "NSError+MAErrorDescription.h"
