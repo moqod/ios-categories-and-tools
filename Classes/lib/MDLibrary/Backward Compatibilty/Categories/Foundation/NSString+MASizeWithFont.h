@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Category adds backward compatibility for `sizeWithFont:` method.
+ */
+
 @interface NSString (MASizeWithFont)
 
 - (CGSize)maSizeWithFont:(UIFont *)font;

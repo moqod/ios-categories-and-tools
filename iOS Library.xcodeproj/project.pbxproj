@@ -32,6 +32,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5217F2E018D9871700E7733D /* UIView+MARoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5217F2DF18D9871700E7733D /* UIView+MARoundedCorner.m */; };
+		5217F2E118D9871700E7733D /* UIView+MARoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5217F2DF18D9871700E7733D /* UIView+MARoundedCorner.m */; };
+		5217F2E418D98A0A00E7733D /* UIScreen+MATools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5217F2E318D98A0A00E7733D /* UIScreen+MATools.m */; };
+		5217F2E518D98A0A00E7733D /* UIScreen+MATools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5217F2E318D98A0A00E7733D /* UIScreen+MATools.m */; };
 		525B2FEC18B0B71E007BE990 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C668F2183A8798005EE0A6 /* Foundation.framework */; };
 		5280250A18B0E0C1004307A2 /* NSString+MASizeWithFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 528024CA18B0E0C1004307A2 /* NSString+MASizeWithFont.m */; };
 		5280250B18B0E0C1004307A2 /* NSError+MAErrorDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 528024CF18B0E0C1004307A2 /* NSError+MAErrorDescription.m */; };
@@ -177,6 +181,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5217F2DE18D9871700E7733D /* UIView+MARoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MARoundedCorner.h"; sourceTree = "<group>"; };
+		5217F2DF18D9871700E7733D /* UIView+MARoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MARoundedCorner.m"; sourceTree = "<group>"; };
+		5217F2E218D98A0A00E7733D /* UIScreen+MATools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+MATools.h"; sourceTree = "<group>"; };
+		5217F2E318D98A0A00E7733D /* UIScreen+MATools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+MATools.m"; sourceTree = "<group>"; };
 		525B2FEB18B0B71E007BE990 /* libMDLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMDLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		525B2FEF18B0B71E007BE990 /* MDLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDLibrary-Prefix.pch"; sourceTree = "<group>"; };
 		528024C918B0E0C1004307A2 /* NSString+MASizeWithFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MASizeWithFont.h"; sourceTree = "<group>"; };
@@ -436,10 +444,14 @@
 				528024E618B0E0C1004307A2 /* UIImage+MARoundedCorner.m */,
 				528024EB18B0E0C1004307A2 /* UIView+MALibrary.h */,
 				528024EC18B0E0C1004307A2 /* UIView+MALibrary.m */,
+				5217F2DE18D9871700E7733D /* UIView+MARoundedCorner.h */,
+				5217F2DF18D9871700E7733D /* UIView+MARoundedCorner.m */,
 				528024ED18B0E0C1004307A2 /* UIView+MAUserInfo.h */,
 				528024EE18B0E0C1004307A2 /* UIView+MAUserInfo.m */,
 				528025CD18B0FBAE004307A2 /* UIDevice+MATools.h */,
 				528025CE18B0FBAE004307A2 /* UIDevice+MATools.m */,
+				5217F2E218D98A0A00E7733D /* UIScreen+MATools.h */,
+				5217F2E318D98A0A00E7733D /* UIScreen+MATools.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -831,11 +843,13 @@
 				5280254918B0E582004307A2 /* NSObject+MAKeyValue.m in Sources */,
 				5280254A18B0E582004307A2 /* UIAlertView+MABlocks.m in Sources */,
 				5280254B18B0E582004307A2 /* UIColor+MATools.m in Sources */,
+				5217F2E518D98A0A00E7733D /* UIScreen+MATools.m in Sources */,
 				5280254E18B0E582004307A2 /* UIFont+MATools.m in Sources */,
 				5280254F18B0E582004307A2 /* UIImage+MALoading.m in Sources */,
 				5280255018B0E582004307A2 /* UIImage+MARoundedCorner.m in Sources */,
 				5280255118B0E582004307A2 /* UIView+MALibrary.m in Sources */,
 				5280255218B0E582004307A2 /* UIView+MAUserInfo.m in Sources */,
+				5217F2E118D9871700E7733D /* UIView+MARoundedCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +886,7 @@
 				5280250B18B0E0C1004307A2 /* NSError+MAErrorDescription.m in Sources */,
 				5280251B18B0E0C1004307A2 /* MDAppDelegate.m in Sources */,
 				5280252918B0E1A9004307A2 /* NSDate-Utilities.m in Sources */,
+				5217F2E018D9871700E7733D /* UIView+MARoundedCorner.m in Sources */,
 				5280251E18B0E0C1004307A2 /* MAMainViewController.m in Sources */,
 				5280257418B0EFE4004307A2 /* UIImage+Alpha.m in Sources */,
 				5280251A18B0E0C1004307A2 /* UIView+MAUserInfo.m in Sources */,
@@ -880,6 +895,7 @@
 				5280251D18B0E0C1004307A2 /* MASmartScrollView.m in Sources */,
 				5280251418B0E0C1004307A2 /* UIFont+MATools.m in Sources */,
 				5280253618B0E4D9004307A2 /* UIImage+ProportionalFill.m in Sources */,
+				5217F2E418D98A0A00E7733D /* UIScreen+MATools.m in Sources */,
 				5280251018B0E0C1004307A2 /* UIAlertView+MABlocks.m in Sources */,
 				5280251618B0E0C1004307A2 /* UIImage+MARoundedCorner.m in Sources */,
 				5280252418B0E0C1004307A2 /* main.m in Sources */,

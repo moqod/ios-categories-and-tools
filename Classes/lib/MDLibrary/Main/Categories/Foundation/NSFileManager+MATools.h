@@ -10,8 +10,9 @@
 
 #define NSFileManagerI		[NSFileManager defaultManager]
 /**
- *	Extension for default NSFileManager. Added methods for works with documents directory and cache directory.
+ *	Category adds useful methods to NSFileManager.
  */
+
 @interface NSFileManager (MATools)
 
 /*

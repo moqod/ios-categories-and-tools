@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
-// This category uses objc associated objects feature.
-// Add any property to any of your objects on-the-fly.
-// Example: userInfo for UIAlertView or event for NSArray. Whatever. Cusu.
+/**
+ *	Adds any property to any object in runtime using objc associated objects feature.
+ *	For example, you can add 'userInfo' property to UIAlertView class, or even to NSArray.
+ *	See UIView+MAUserInfo for more information.
+ */
 @interface NSObject (MAKeyValue)
 
 // Default association policy is OBJC_ASSOCIATION_RETAIN_NONATOMIC.

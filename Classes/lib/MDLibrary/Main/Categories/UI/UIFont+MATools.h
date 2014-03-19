@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *	UIFont category.
+ */
+
 @interface UIFont (MATools)
 
 // Returns rounded line height.
-- (CGFloat)maLineHeight;
+@property (nonatomic, readonly) CGFloat		maLineHeight;
 
 @end

@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+
 /**
- *	Extension for NSError class. Helpful for using localized description of the error.
+ *	Category for localizing errors. Easy.
  */
 @interface NSError (MAErrorDescription)
 
 /**
- *	Creates error object with domain, code and localized description. Localized description will stored in userInfo with NSLocalizedDescriptionKey key.
+ *	Creates error object with domain, code and localized description (NSLocalizedDescriptionKey).
  *
  *	@param	domain					Domain of the error.
  *	@param	code					Code of the error.
@@ -26,7 +27,7 @@
 /**
  *	If localized description is not nil then it would create error with same domain and error code, but it will add localized description to new error object.
  *
- *	@param	localizedDescription	String for localized description for new error object.
+ *	@param	localizedDescription	Localized description string for new error object.
  *
  *	@return	New error object if localized description is not nil, otherwise self.
  */

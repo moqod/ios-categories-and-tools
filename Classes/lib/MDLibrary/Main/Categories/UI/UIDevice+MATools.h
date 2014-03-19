@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *	UIDevice category.
+ */
+
 #define MA_DEVICE_IS_PAD							[[UIDevice currentDevice] maIsPad]
-#define MA_DEVICE_HAS_568_HEIGHT					[[UIDevice currentDevice] maHas568PointsHeight]
 
 @interface UIDevice (MATools)
 
@@ -27,9 +30,5 @@
 
 // type of the device
 @property (nonatomic, readonly) BOOL				maIsPad;
-
-// screen charasteristics
-@property (nonatomic, readonly) BOOL				maHasRetinaDisplay;
-@property (nonatomic, readonly) BOOL				maHas568PointsHeight;
 
 @end

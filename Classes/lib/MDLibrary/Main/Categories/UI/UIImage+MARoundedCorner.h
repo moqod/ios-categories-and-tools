@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-// Uses UIView+MALibrary
+/**
+ *	Creates rounded image with give background color and corner radius.
+ *	Useful for creating buttons with stretchable background images, etc.
+ *	Uses UIView+MALibrary.
+ */
 
 @interface UIImage (MARoundedCorner)
 

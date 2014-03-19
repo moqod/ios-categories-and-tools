@@ -16,10 +16,11 @@ extern NSString *const NSNotificationCenterKeys_Error;
 #define NTF_RESULT(x)                           [[x userInfo] objectForKey:NSNotificationCenterKeys_Result]
 #define NTF_USERINFO(x)							[[x userInfo] objectForKey:NSNotificationCenterKeys_UserInfo]
 
-/** Simplifies result handling.
- 
- Uses NSNotification userInfo (NSDictionary) as container for packing parameters.
- Sample: data engine sends notification when network request is done (succeed or failed) and observers can obtain result, error or userInfo using macros.
+/** 
+ * Simplifies results handling.
+ * Most of operations have result or error and maybe userInfo.
+ * Uses NSNotification userInfo (NSDictionary) as container for packing parameters.
+ * Sample: data engine sends notification when network request is done (succeed or failed) and observers can obtain result, error or userInfo using macros.
  */
 @interface NSNotificationCenter (MAKeys)
 

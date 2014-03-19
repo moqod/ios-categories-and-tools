@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-/*
+/**
  *	Supports 'Localizable' table only.
  */
 
@@ -42,6 +42,8 @@
 // Default is YES.
 @property (nonatomic, assign) BOOL					handlesMainLocalizationChanges;
 
+// Notification name.
+// MALocalizationEngine sends NSNotification with this name when localization changed.
 @property (nonatomic, readonly) NSString			*localizationDidChangeNotificationName;
 
 // Returns country name for given language code.

@@ -52,18 +52,7 @@
 #pragma mark -
 
 - (BOOL)maIsPad {
-	// [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-	return ([self userInterfaceIdiom] == UIUserInterfaceIdiomPad);
-}
-
-#pragma mark -
-
-- (BOOL)maHasRetinaDisplay {
-	return [[UIScreen mainScreen] scale] > 1.0;
-}
-
-- (BOOL)maHas568PointsHeight {
-	return fabsf( [[UIScreen mainScreen] bounds].size.height - 568.0f ) < FLT_EPSILON;
+	return (UIUserInterfaceIdiomPad == [self userInterfaceIdiom]);
 }
 
 @end

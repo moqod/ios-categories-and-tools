@@ -79,6 +79,7 @@ NSString *const MALocalizationDidChangeNotification								= @"MALocalizationDid
 }
 
 - (void)dealloc {
+#if !__has_feature(objc_arc)
     [_currentLanguageCode release];
 	[_currentLocalizationDictionary release];
 	[_localizationBundle release];
@@ -86,6 +87,7 @@ NSString *const MALocalizationDidChangeNotification								= @"MALocalizationDid
 	[_allLocalizationDictionaries release];
 #endif
     [super dealloc];
+#endif
 }
 
 #pragma mark - private
@@ -185,11 +187,14 @@ NSString *const MALocalizationDidChangeNotification								= @"MALocalizationDid
 - (void)setCurrentLanguageCode:(NSString *)currentLanguageCode {
 	if (nil != currentLanguageCode && NO == [_currentLanguageCode isEqualToString:currentLanguageCode]) {
 		BOOL wasNil = (_currentLanguageCode == nil);
-		
+#if !__has_feature(objc_arc)
 		[_currentLanguageCode autorelease];
 		_currentLanguageCode = [currentLanguageCode retain];
+#else
+		_currentLanguageCode = currentLanguageCode;
+#endif
 		
-		// store user's choice
+		// save user's choice
 		[[NSUserDefaults standardUserDefaults] setValue:_currentLanguageCode forKey:self.languageCodeKey];
 		[[NSUserDefaults standardUserDefaults] synchronize];
 

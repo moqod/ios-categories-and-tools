@@ -11,6 +11,7 @@
 
 @implementation UIImage (MARoundedCorner)
 
+// TODO: draw an image using Quartz
 + (UIImage *)maRoundedImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius backgroundColor:(UIColor *)backgroundColor {
 	// TODO: draw using Quartz
 	UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, size.width, size.height)];

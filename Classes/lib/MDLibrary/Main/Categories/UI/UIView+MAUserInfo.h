@@ -9,16 +9,15 @@
 #import <UIKit/UIKit.h>
 
 /**
- Adds custom object as user info to UIView. Can be used in any UIView subclass - such as UIAlertView, UIActionSheet, UIControl.
- Lovely.
+ *	Adds any object as user info to UIView.
+ *	Standart `tag` property is good, but not suitable in some cases.
+ *	This category can be used in any UIView subclass - such as UIAlertView, UIActionSheet, UIControl.
+ *	Lovely.
  */
 
 @interface UIView (MAUserInfo)
 
-/**
- Custom object. Will be released automatically when view is deallocated.
- Name of the property has prefix 'ma' to avoid custom views which may already implement stuff like userInfo.
- */
+// Custom object. Will be released automatically when view is deallocated.
 @property (nonatomic, retain) id		maUserInfo;
 
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /**
- Helpful additional methods for UIColor
+ *	Helpful additional methods for UIColor class.
  */
 
 @interface UIColor (MATools)
@@ -60,9 +60,10 @@
  */
 + (UIColor *)maIntColorWithRed:(unsigned int)red green:(unsigned int)green blue:(unsigned int)blue alpha:(unsigned int)alpha;
 
-
+// These methods returns color compoments.
 @property (nonatomic, readonly) CGFloat		maRed;
 @property (nonatomic, readonly) CGFloat		maGreen;
 @property (nonatomic, readonly) CGFloat		maBlue;
 @property (nonatomic, readonly) CGFloat		maAlpha;
+
 @end

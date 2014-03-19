@@ -41,7 +41,7 @@
 		return components[componentIndex];
 	} else {
 #ifdef DEBUG
-		NSLog(@"%s invalid color component index %zu (%zu)", __PRETTY_FUNCTION__, componentIndex, numberOfComponents);
+		NSLog(@"%s invalid color component index %zu (number of components == %zu)", __PRETTY_FUNCTION__, componentIndex, numberOfComponents);
 #endif
 		return 0.0f;
 	}

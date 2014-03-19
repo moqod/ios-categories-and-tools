@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 /**
- Adds completition block to alert view.
- Uses NSObject+MAKeyValue.h.
+ *	Adds completition block to UIAlertView.
+ *	Uses NSObject+MAKeyValue.h.
  */
 
 typedef void (^UIAlertViewMACompletionBlock)(UIAlertView *alertView, NSUInteger buttonIndex);

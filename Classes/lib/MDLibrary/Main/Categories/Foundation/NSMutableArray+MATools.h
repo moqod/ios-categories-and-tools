@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- Method for safe adding adding into an array. 
- Useful when objects constructed on-the-fly and added to some result array.
+ *	Category adds two methods.
  */
 
 @interface NSMutableArray (MATools)

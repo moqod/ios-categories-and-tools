@@ -9,7 +9,7 @@
 #import "UIImage+MALoading.h"
 #import "NSObject+MAKeyValue.h"
 #import "UIDevice+MATools.h"
-
+#import "UIScreen+MATools.h"
 #import <objc/runtime.h>
 
 NSString *const UIImageMALoadingFilePathKey					= @"maPathKey";
@@ -88,46 +88,41 @@ static NSMutableDictionary *maImageLoadingCacheDictionary = nil;
 
 #pragma mark - background images
 
-+ (UIImage *)maBackgroundBundleImageWithContentsOfFile:(NSString *)imageFileName {
-    return [self maBackgroundBundleImageWithContentsOfFile:imageFileName fromBundle:[NSBundle mainBundle]];
++ (UIImage *)maBackgroundImageNamed:(NSString *)imageFileName {
+    return [self maBackgroundImageNamed:imageFileName bundle:[NSBundle mainBundle]];
 }
 
-+ (UIImage *)maBackgroundBundleImageWithContentsOfFile:(NSString *)imageFileName fromBundle:(NSBundle *)bundle {
++ (UIImage *)maBackgroundImageNamed:(NSString *)imageFileName bundle:(NSBundle *)bundle {
 	// <basename><usage_specific_modifiers><scale_modifier><device_modifier>.png
 	NSString *suffix = [[UIDevice currentDevice] maIsPad] ? @"~ipad" : nil;
-	NSString *modifier = [[UIDevice currentDevice] maHas568PointsHeight] ? @"-568h" : nil;
+	NSString *modifier = MA_SCREEN_HAS_568_HEIGHT ? @"-568h" : nil;
 	if (suffix || modifier) {
 		NSString *fileExtension = [imageFileName pathExtension] ? [imageFileName pathExtension] : @"";
-		NSMutableString *mutableFileName = [NSMutableString stringWithString: [[imageFileName lastPathComponent] stringByDeletingPathExtension]];
+		NSMutableString *mutableFileName = [NSMutableString stringWithString: [imageFileName stringByDeletingPathExtension]];
 		if (modifier) {
 			[mutableFileName appendString:modifier];
 		}
-		if ([[UIDevice currentDevice] maHasRetinaDisplay]) {
+		if ([[UIScreen mainScreen] maHasRetinaDisplay]) {
 			[mutableFileName appendString:@"@2x"];
 		}
 		if (suffix) {
 			[mutableFileName appendString:suffix];
 		}
 		
-		NSString *imagePath = [bundle pathForResource:mutableFileName ofType:fileExtension];
-		
-		if (nil != imagePath) {
-			return [self imageWithContentsOfFile:imagePath];
-		} else {
-			return [self imageWithContentsOfFile: [bundle pathForResource:imageFileName ofType:fileExtension]];
-		}
+		NSString *imageFilePath = [bundle pathForResource:mutableFileName ofType:fileExtension];
+		return [self maImageWithContentsOfFile:imageFilePath];
 	} else {
-		return [self maBundleImageWithContentsOfFile:imageFileName fromBundle:bundle];
+		return [self maImageNamed:imageFileName bundle:bundle];
 	}
 }
 
-+ (UIImage *)maBundleImageWithContentsOfFile:(NSString *)imageFileName {
-	return [self maBundleImageWithContentsOfFile:imageFileName fromBundle:[NSBundle mainBundle]];
++ (UIImage *)maImageNamed:(NSString *)imageFileName {
+	return [self maImageNamed:imageFileName bundle:[NSBundle mainBundle]];
 }
 
-+ (UIImage *)maBundleImageWithContentsOfFile:(NSString *)imageFileName fromBundle:(NSBundle *)bundle {
-    return [self imageWithContentsOfFile:[bundle pathForResource:imageFileName ofType:nil]];
++ (UIImage *)maImageNamed:(NSString *)imageFileName bundle:(NSBundle *)bundle {
+	NSString *filePath = [bundle pathForResource:imageFileName ofType:nil];
+	return [self maImageWithContentsOfFile:filePath];
 }
-
 
 @end
