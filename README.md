@@ -166,7 +166,6 @@ Sample: data engine sends notification when network request is done (succeed or 
 #define NTF_USERINFO(x)							[[x userInfo] objectForKey:NSNotificationCenterKeys_UserInfo]
 
 - (void)maSendNotificationNamed:(NSString *)notificationName object:(id)object result:(id)result error:(NSError *)error userInfo:(id)userInfo;
-
 ```
 
 # Classes
@@ -178,5 +177,3 @@ This class manages and uses localizations supported in the app.
 Sometimes standart method `NSLocalizableString` is not suitable because user can choose custom language from the app.
 This can work with different bundles, supports `Localizable` table only.
 See implementation for more details.
-- (void)maSendNotificationNamed:(NSString *)notificationName object:(id)object result:(id)result error:(NSError *)error userInfo:(id)userInfo;
-```
