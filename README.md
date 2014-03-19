@@ -164,6 +164,9 @@ Sample: data engine sends notification when network request is done (succeed or 
 #define NTF_ERROR(x)                [[x userInfo] objectForKey:NSNotificationCenterKeys_Error]
 #define NTF_RESULT(x)               [[x userInfo] objectForKey:NSNotificationCenterKeys_Result]
 #define NTF_USERINFO(x)							[[x userInfo] objectForKey:NSNotificationCenterKeys_UserInfo]
+
+- (void)maSendNotificationNamed:(NSString *)notificationName object:(id)object result:(id)result error:(NSError *)error userInfo:(id)userInfo;
+
 ```
 
 # Classes
