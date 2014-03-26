@@ -36,6 +36,8 @@
 		5217F2E118D9871700E7733D /* UIView+MARoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5217F2DF18D9871700E7733D /* UIView+MARoundedCorner.m */; };
 		5217F2E418D98A0A00E7733D /* UIScreen+MATools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5217F2E318D98A0A00E7733D /* UIScreen+MATools.m */; };
 		5217F2E518D98A0A00E7733D /* UIScreen+MATools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5217F2E318D98A0A00E7733D /* UIScreen+MATools.m */; };
+		5217F3DD18E307A000E7733D /* MDFastTouchesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5217F3DC18E307A000E7733D /* MDFastTouchesView.m */; };
+		5217F3DE18E307A000E7733D /* MDFastTouchesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5217F3DC18E307A000E7733D /* MDFastTouchesView.m */; };
 		525B2FEC18B0B71E007BE990 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C668F2183A8798005EE0A6 /* Foundation.framework */; };
 		5280250A18B0E0C1004307A2 /* NSString+MASizeWithFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 528024CA18B0E0C1004307A2 /* NSString+MASizeWithFont.m */; };
 		5280250B18B0E0C1004307A2 /* NSError+MAErrorDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 528024CF18B0E0C1004307A2 /* NSError+MAErrorDescription.m */; };
@@ -185,6 +187,8 @@
 		5217F2DF18D9871700E7733D /* UIView+MARoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MARoundedCorner.m"; sourceTree = "<group>"; };
 		5217F2E218D98A0A00E7733D /* UIScreen+MATools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+MATools.h"; sourceTree = "<group>"; };
 		5217F2E318D98A0A00E7733D /* UIScreen+MATools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+MATools.m"; sourceTree = "<group>"; };
+		5217F3DB18E307A000E7733D /* MDFastTouchesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFastTouchesView.h; sourceTree = "<group>"; };
+		5217F3DC18E307A000E7733D /* MDFastTouchesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFastTouchesView.m; sourceTree = "<group>"; };
 		525B2FEB18B0B71E007BE990 /* libMDLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMDLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		525B2FEF18B0B71E007BE990 /* MDLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDLibrary-Prefix.pch"; sourceTree = "<group>"; };
 		528024C918B0E0C1004307A2 /* NSString+MASizeWithFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MASizeWithFont.h"; sourceTree = "<group>"; };
@@ -300,6 +304,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5217F3DA18E307A000E7733D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5217F3DB18E307A000E7733D /* MDFastTouchesView.h */,
+				5217F3DC18E307A000E7733D /* MDFastTouchesView.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		525B2FED18B0B71E007BE990 /* MDLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +472,7 @@
 		528024EF18B0E0C1004307A2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5217F3DA18E307A000E7733D /* UI */,
 				52ADB7AB18B67ECC00EC1A7D /* Foundation */,
 			);
 			path = Classes;
@@ -848,6 +862,7 @@
 				5280254F18B0E582004307A2 /* UIImage+MALoading.m in Sources */,
 				5280255018B0E582004307A2 /* UIImage+MARoundedCorner.m in Sources */,
 				5280255118B0E582004307A2 /* UIView+MALibrary.m in Sources */,
+				5217F3DE18E307A000E7733D /* MDFastTouchesView.m in Sources */,
 				5280255218B0E582004307A2 /* UIView+MAUserInfo.m in Sources */,
 				5217F2E118D9871700E7733D /* UIView+MARoundedCorner.m in Sources */,
 			);
@@ -878,6 +893,7 @@
 				5280250E18B0E0C1004307A2 /* NSNotificationCenter+MAKeys.m in Sources */,
 				5280252018B0E0C1004307A2 /* MAImageSampleViewController.m in Sources */,
 				5280251918B0E0C1004307A2 /* UIView+MALibrary.m in Sources */,
+				5217F3DD18E307A000E7733D /* MDFastTouchesView.m in Sources */,
 				5280251118B0E0C1004307A2 /* UIColor+MATools.m in Sources */,
 				5280251F18B0E0C1004307A2 /* MAColorSampleViewController.m in Sources */,
 				5280257518B0EFE4004307A2 /* UIImage+RoundedCorner.m in Sources */,

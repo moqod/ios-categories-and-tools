@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- *	Category adds two methods.
+ *	Category adds two methods, one for adding any objects (incapsulates nil-checking) and one for removing objects.
  */
 
 @interface NSMutableArray (MATools)
