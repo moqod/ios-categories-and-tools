@@ -21,11 +21,20 @@ const NSTimeInterval MDFastTouchesViewDefaultDelay			= 0.1;
 @implementation MDFastTouchesView
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-	UIView *view = [super hitTest:point withEvent:event];
+	if (self.tappedButton) {
+        if (CGRectContainsPoint(self.tappedButton.frame, point)) {
+            return [super hitTest:point withEvent:event];
+        }
+        return nil;
+    }
+    UIView *view = [super hitTest:point withEvent:event];
 	if (UIEventTypeTouches == event.type && YES == [view isKindOfClass:[UIButton class]] && self.tappedButton != view) {
-		if (fabs(event.timestamp - _mdTouchTimestamp) > MDFastTouchesViewDefaultDelay || event.timestamp - _mdTouchTimestamp == 0) {
+		if (fabs(event.timestamp - _mdTouchTimestamp) > MDFastTouchesViewDefaultDelay) {
 			_mdTouchTimestamp = event.timestamp;
 			self.tappedButton = view;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                self.tappedButton = nil;
+            });
 			return view;
 		} else {
 			return nil;
