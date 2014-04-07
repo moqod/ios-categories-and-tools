@@ -22,7 +22,8 @@ const NSTimeInterval MDFastTouchesViewDefaultDelay			= 0.1;
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
 	if (self.tappedButton) {
-        if (CGRectContainsPoint(self.tappedButton.frame, point)) {
+        CGPoint localPoint = [self convertPoint:point toView:self.tappedButton];
+        if (CGRectContainsPoint(self.tappedButton.bounds, localPoint)) {
             return [super hitTest:point withEvent:event];
         }
         return nil;
