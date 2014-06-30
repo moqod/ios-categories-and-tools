@@ -122,6 +122,7 @@
 		52ADB7AF18B67ECC00EC1A7D /* MALocalizationEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ADB7AE18B67ECC00EC1A7D /* MALocalizationEngine.m */; };
 		52ADB7B018B67ED100EC1A7D /* MALocalizationEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ADB7AE18B67ECC00EC1A7D /* MALocalizationEngine.m */; };
 		52ADB7B118B6804000EC1A7D /* MALocalizationEngine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52ADB7AD18B67ECC00EC1A7D /* MALocalizationEngine.h */; };
+		52B4CAE81961E3C200E93A71 /* MDLoadImagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4CAE71961E3C200E93A71 /* MDLoadImagesManager.m */; };
 		52C07DAF18B0D4DC0025E286 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C668F4183A8798005EE0A6 /* CoreGraphics.framework */; };
 		52C07DB018B0D4E80025E286 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C668F6183A8798005EE0A6 /* UIKit.framework */; };
 		52C668F3183A8798005EE0A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C668F2183A8798005EE0A6 /* Foundation.framework */; };
@@ -260,6 +261,8 @@
 		528025CE18B0FBAE004307A2 /* UIDevice+MATools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+MATools.m"; sourceTree = "<group>"; };
 		52ADB7AD18B67ECC00EC1A7D /* MALocalizationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MALocalizationEngine.h; sourceTree = "<group>"; };
 		52ADB7AE18B67ECC00EC1A7D /* MALocalizationEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MALocalizationEngine.m; sourceTree = "<group>"; };
+		52B4CAE61961E3C200E93A71 /* MDLoadImagesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDLoadImagesManager.h; sourceTree = "<group>"; };
+		52B4CAE71961E3C200E93A71 /* MDLoadImagesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDLoadImagesManager.m; sourceTree = "<group>"; };
 		52C668EF183A8798005EE0A6 /* iOS Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Library.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C668F2183A8798005EE0A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		52C668F4183A8798005EE0A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -307,6 +310,8 @@
 		5217F3DA18E307A000E7733D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				52B4CAE61961E3C200E93A71 /* MDLoadImagesManager.h */,
+				52B4CAE71961E3C200E93A71 /* MDLoadImagesManager.m */,
 				5217F3DB18E307A000E7733D /* MDFastTouchesView.h */,
 				5217F3DC18E307A000E7733D /* MDFastTouchesView.m */,
 			);
@@ -903,6 +908,7 @@
 				5280251B18B0E0C1004307A2 /* MDAppDelegate.m in Sources */,
 				5280252918B0E1A9004307A2 /* NSDate-Utilities.m in Sources */,
 				5217F2E018D9871700E7733D /* UIView+MARoundedCorner.m in Sources */,
+				52B4CAE81961E3C200E93A71 /* MDLoadImagesManager.m in Sources */,
 				5280251E18B0E0C1004307A2 /* MAMainViewController.m in Sources */,
 				5280257418B0EFE4004307A2 /* UIImage+Alpha.m in Sources */,
 				5280251A18B0E0C1004307A2 /* UIView+MAUserInfo.m in Sources */,
