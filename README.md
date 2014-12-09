@@ -82,35 +82,6 @@ Our favorite method `- (BOOL)maFindAndResignFirstResponder`.
 ### UIView+MARoundedCorner
 Adds custom rounded corners. You can specify any of them - top left, bottom right, etc.
 
-### UIDevice+MATools
-UIDevice category.
-``` objc
-// Returns unique identfier.
-// This identifier generates once when the app is installed.
-// After deleting the app from the device a new identifier is generated.
-// This value is excluded from backup.
-@property (nonatomic, readonly) NSString			*maUniqueIdentifier;
-
-// Detects if current device can vibrate or not.
-// Simply checks device type.
-// On 16 Feb 2014 only iPhone can vibrate :)
-@property (nonatomic, readonly) BOOL				maCanVibrate;
-@property (nonatomic, readonly) BOOL				maCanCall;
-
-// type of the device
-@property (nonatomic, readonly) BOOL				maIsPad;
-```
-
-### UIScreen+MATools
-UIScreen category.
-``` objc
-// Returns YES if screen scale > 1.0
-@property (nonatomic, readonly) BOOL				maHasRetinaDisplay;
-
-// Returns YES if screen height is 568 points. Thanks, Cap!
-@property (nonatomic, readonly) BOOL				maHas568PointsHeight;
-```
-
 ## Foundation
 
 ### NSObject+MAKeyValue
