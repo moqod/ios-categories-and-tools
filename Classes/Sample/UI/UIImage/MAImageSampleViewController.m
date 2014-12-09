@@ -7,7 +7,8 @@
 //
 
 #import "MAImageSampleViewController.h"
-#import "UIImage+MARoundedCorner.h"
+#import "UIImage+MASimpleImages.h"
+#import "UIButton+MALibrary.h"
 
 @interface MAImageSampleViewController ()
 
@@ -31,18 +32,24 @@
 	imageView.image = [UIImage maRoundedImageWithSize:imageView.bounds.size cornerRadius:cornerRadius backgroundColor:[UIColor darkGrayColor]];
 	[self.smartScrollView addSubview:imageView];
 	
-	
 	[self.smartScrollView addDescriptionText:@"\nUIButton with stretchable background image:"];
+	
 	const CGFloat buttonCornerRadius = 6.0f;
 	const CGFloat buttonHeight = 40.0f;
-	UIImage *roundedButtonImage = [UIImage maRoundedImageWithSize:CGSizeMake(buttonCornerRadius * 2.0f, buttonCornerRadius * 2.0f) cornerRadius:buttonCornerRadius backgroundColor:[UIColor orangeColor]];
-	UIImage *stretchableImage = [roundedButtonImage resizableImageWithCapInsets:UIEdgeInsetsMake(buttonCornerRadius, buttonCornerRadius, buttonCornerRadius, buttonCornerRadius)];
-	UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+	UIImage *roundedButtonImage = [[UIImage maRoundedImageWithSize:CGSizeMake(buttonCornerRadius * 2.0f, buttonCornerRadius * 2.0f) cornerRadius:buttonCornerRadius backgroundColor:[UIColor orangeColor]] maStretchableImage];
+	UIImage *roundedSelectedButtonImage = [[UIImage maRoundedImageWithSize:CGSizeMake(buttonCornerRadius * 2.0f, buttonCornerRadius * 2.0f) cornerRadius:buttonCornerRadius backgroundColor:[UIColor greenColor]] maStretchableImage];
+	UIButton *button = [UIButton maButtonWithBackgroundImage:roundedButtonImage highlightedBackgroundImage:roundedSelectedButtonImage];
 	button.frame = CGRectMake(0.0f, 0.0f, viewSize, buttonHeight);
-	[button setBackgroundImage:stretchableImage forState:UIControlStateNormal];
 	[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 	[button setTitle:@"Button" forState:UIControlStateNormal];
 	[self.smartScrollView addSubview:button];
+	
+	UIImage *rectImage = [UIImage maRectImageWithSize:CGSizeMake(buttonHeight, buttonHeight) backgroundColor:[UIColor whiteColor] borderWidth:2.0 borderColor:[UIColor blackColor]];
+	UIButton *button2 = [UIButton maButtonWithBackgroundImage:[rectImage maStretchableImage]];
+	button2.frame = CGRectMake(0.0f, 0.0f, self.view.bounds.size.width - 40.0, buttonHeight);
+	[button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+	[button2 setTitle:@"Button" forState:UIControlStateNormal];
+	[self.smartScrollView addSubview:button2];
 }
 
 @end
