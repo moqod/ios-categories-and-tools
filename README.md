@@ -4,21 +4,15 @@ iOS Categories and Tools
 This project provides set of useful categories and classes for iOS, most of them developed by Moqod.
 We have tried to separate categories into logical pieces. Please, keep in mind that it's better to include only needed categories, not all of them.
 
-#Todo
-- Add ARC support to all categories. Most of them support ARC now, but `UIImage+MALoading` and other maybe other don't.
+#Note
+- `UIImage+MALoading` category does not support ARC (becaus of swizzling `dealloc` method). Add `-fno-objc-arc` flag to the implementation file.
 
 # Categories
 
+Some categories described below.
+
 ## User Interface
 
-### UIView+MAUserInfo
-Assigns any object as user info to `UIView`.
-Standart `tag` property is good, but not suitable in some cases.
-This category can be used in any `UIView` subclass - such as `UIAlertView`, `UIActionSheet`, `UIControl`.
-Lovely, ha?!
-``` objc
-@property (nonatomic, retain) id		maUserInfo;
-```
 ### UIImage+MALoading
 This category provides a set of methods for easy images loading.
 The main one is `maImageWithContentsOfFile` - this method adds smart caching for loaded images.
@@ -122,11 +116,17 @@ UIScreen category.
 ### NSObject+MAKeyValue
 Adds any property to any object in runtime using objc associated objects feature.
 For example, you can add `userInfo` property to `UIAlertView` class, or even to `NSArray`.
+
+Provides easy to use `maUserInfo` property.
+
 See `UIView+MAUserInfo` for more information.
 ``` objc
 - (void)maSetValue:(id)value forKey:(NSString *)key;
 - (void)maSetValue:(id)value forKey:(NSString *)key associationPolicy:(objc_AssociationPolicy)associationPolicy;
 - (id)maValueForKey:(NSString *)key;
+
+@property (nonatomic, strong) id  maUserInfo;
+
 ```
 
 ### NSError+MAErrorDescription
