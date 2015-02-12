@@ -42,6 +42,7 @@
 		52DAAEF418A014B1007E8681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DAAEF118A014B1007E8681 /* Default-568h@2x.png */; };
 		52DAAEF518A014B1007E8681 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DAAEF218A014B1007E8681 /* Default@2x.png */; };
 		52DAAEF618A014B1007E8681 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DAAEF318A014B1007E8681 /* Icon.png */; };
+		52E80D7C1A8D083900B8F651 /* UIView+MAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E80D7B1A8D083900B8F651 /* UIView+MAAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,8 @@
 		52DAAEF118A014B1007E8681 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		52DAAEF218A014B1007E8681 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		52DAAEF318A014B1007E8681 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		52E80D7A1A8D083900B8F651 /* UIView+MAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MAAdditions.h"; sourceTree = "<group>"; };
+		52E80D7B1A8D083900B8F651 /* UIView+MAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MAAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 				524391141A3744670095904F /* MAUICategories.h */,
 				524391151A3744670095904F /* UIAlertView+MABlocks.h */,
 				524391161A3744670095904F /* UIAlertView+MABlocks.m */,
+				524391441A374AD00095904F /* UIButton+MALibrary.h */,
+				524391451A374AD00095904F /* UIButton+MALibrary.m */,
 				524391171A3744670095904F /* UIColor+MATools.h */,
 				524391181A3744670095904F /* UIColor+MATools.m */,
 				524391191A3744670095904F /* UIFont+MATools.h */,
@@ -186,12 +191,12 @@
 				524391201A3744670095904F /* UIImage+ProportionalFill.m */,
 				524391211A3744670095904F /* UIImage+Tint.h */,
 				524391221A3744670095904F /* UIImage+Tint.m */,
+				52E80D7A1A8D083900B8F651 /* UIView+MAAdditions.h */,
+				52E80D7B1A8D083900B8F651 /* UIView+MAAdditions.m */,
 				524391231A3744670095904F /* UIView+MALibrary.h */,
 				524391241A3744670095904F /* UIView+MALibrary.m */,
 				524391251A3744670095904F /* UIView+MARoundedCorner.h */,
 				524391261A3744670095904F /* UIView+MARoundedCorner.m */,
-				524391441A374AD00095904F /* UIButton+MALibrary.h */,
-				524391451A374AD00095904F /* UIButton+MALibrary.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				524391401A3744670095904F /* UIView+MARoundedCorner.m in Sources */,
 				5243913C1A3744670095904F /* UIImage+MASimpleImages.m in Sources */,
 				5243913D1A3744670095904F /* UIImage+ProportionalFill.m in Sources */,
+				52E80D7C1A8D083900B8F651 /* UIView+MAAdditions.m in Sources */,
 				5280252018B0E0C1004307A2 /* MAImageSampleViewController.m in Sources */,
 				524391371A3744670095904F /* NSString+MASizeWithFont.m in Sources */,
 				5243913B1A3744670095904F /* UIImage+MALoading.m in Sources */,
