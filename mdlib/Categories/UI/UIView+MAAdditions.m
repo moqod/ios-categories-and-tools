@@ -102,32 +102,32 @@
 
 - (void)setXLocationAfterView:(UIView *)view withSpacing:(CGFloat)space
 {
-    self.maLeft = view.maRight + space;
+    self.maLeft = floor(view.maRight + space);
 }
 
 - (void)setYLocationAfterView:(UIView *)view withSpacing:(CGFloat)space
 {
-    self.maTop = view.maBottom + space;
+    self.maTop = floor(view.maBottom + space);
 }
 
 - (void)centrateVerticalInView:(UIView *)view
 {
-    self.maTop = CGRectGetMidY(view.bounds) - self.maHeight * 0.5f;
+    self.maTop = floor(CGRectGetMidY(view.bounds) - self.maHeight * 0.5f);
 }
 
 - (void)centrateHorizontalInView:(UIView *)view
 {
-    self.maLeft = CGRectGetMidX(view.bounds) - self.maWidth * 0.5f;
+    self.maLeft = floor(CGRectGetMidX(view.bounds) - self.maWidth * 0.5f);
 }
 
 - (void)centrateVerticalBasedOnView:(UIView *)view
 {
-    self.maTop = CGRectGetMidY(view.frame) - self.maHeight * 0.5f;
+    self.maTop = floor(CGRectGetMidY(view.frame) - self.maHeight * 0.5f);
 }
 
 - (void)centrateHorizontalBasedOnView:(UIView *)view
 {
-    self.maLeft = CGRectGetMidX(view.frame) - self.maWidth *0.5f;
+    self.maLeft = floor(CGRectGetMidX(view.frame) - self.maWidth *0.5f);
 }
 
 
