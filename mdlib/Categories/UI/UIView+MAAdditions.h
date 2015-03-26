@@ -20,9 +20,9 @@
 #pragma mark * Size
 @property (nonatomic, assign) CGFloat maWidth;
 @property (nonatomic, assign) CGFloat maHeight;
+@property (nonatomic, assign) CGSize  maSize;
 
 #pragma mark - Location
-
 - (void)setXLocationAfterView:(UIView *)view withSpacing:(CGFloat)space;
 - (void)setYLocationAfterView:(UIView *)view withSpacing:(CGFloat)space;
 - (void)centrateVerticalInView:(UIView *)view;

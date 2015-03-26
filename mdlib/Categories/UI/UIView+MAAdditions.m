@@ -98,6 +98,19 @@
     return self.bounds.size.height;
 }
 
+- (CGSize)maSize
+{
+    return self.bounds.size;
+}
+
+- (void)setMaSize:(CGSize)maSize
+{
+    CGRect bounds = self.bounds;
+    bounds.size = maSize;
+    self.bounds = bounds;
+}
+
+
 #pragma mark - Location
 
 - (void)setXLocationAfterView:(UIView *)view withSpacing:(CGFloat)space
