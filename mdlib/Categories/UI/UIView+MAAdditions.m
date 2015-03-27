@@ -105,9 +105,9 @@
 
 - (void)setMaSize:(CGSize)maSize
 {
-    CGRect bounds = self.bounds;
-    bounds.size = maSize;
-    self.bounds = bounds;
+    CGRect frame = self.frame;
+    frame.size = maSize;
+    self.frame = frame;
 }
 
 
