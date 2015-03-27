@@ -9,6 +9,7 @@
 #ifndef iOS_Library_MAFoundationCategories_h
 #define iOS_Library_MAFoundationCategories_h
 
+#import "NSArray+MATools.h"
 #import "NSError+MAErrorDescription.h"
 #import "NSFileManager+MATools.h"
 #import "NSMutableArray+MATools.h"
