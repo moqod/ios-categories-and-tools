@@ -11,24 +11,6 @@
 
 @implementation NSArray (MATools)
 
-+ (void)maLoad
-{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Method origImageNamedMethod = class_getClassMethod(self.class, @selector(objectAtIndexedSubscript:));
-        method_exchangeImplementations(origImageNamedMethod, class_getClassMethod(self.class, @selector(maObjectAtIndexedSubscript:)));
-    });
-}
-
-#pragma mark - 
-- (id)maObjectAtIndexedSubscript:(NSUInteger)idx
-{
-    if (idx >= self.count) {
-        return nil;
-    }
-    return [self objectAtIndexedSubscript:idx];
-}
-
 - (id)maObjectAtIndex:(NSUInteger)index
 {
     if (index >= self.count) {
