@@ -12,9 +12,9 @@ extern NSString *const NSNotificationCenterKeys_Result;
 extern NSString *const NSNotificationCenterKeys_UserInfo;
 extern NSString *const NSNotificationCenterKeys_Error;
 
-#define NTF_ERROR(x)                            [[x userInfo] objectForKey:NSNotificationCenterKeys_Error]
-#define NTF_RESULT(x)                           [[x userInfo] objectForKey:NSNotificationCenterKeys_Result]
-#define NTF_USERINFO(x)							[[x userInfo] objectForKey:NSNotificationCenterKeys_UserInfo]
+#define NTF_ERROR(notification)                 [[notification userInfo] objectForKey:NSNotificationCenterKeys_Error]
+#define NTF_RESULT(notification)                [[notification userInfo] objectForKey:NSNotificationCenterKeys_Result]
+#define NTF_USERINFO(notification)				[[notification userInfo] objectForKey:NSNotificationCenterKeys_UserInfo]
 
 /** 
  * Simplifies results handling.

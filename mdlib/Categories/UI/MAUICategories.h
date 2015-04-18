@@ -14,6 +14,8 @@
 #import "UIFont+MATools.h"
 #import "UIImage+MALoading.h"
 #import "UIImage+MARoundedCorner.h"
+#import "UIImageView+MAImage.h"
+#import "UIView+MAAdditions.h"
 #import "UIView+MALibrary.h"
 
 #endif
